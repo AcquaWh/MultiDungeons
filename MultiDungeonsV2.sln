@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.Light
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro.Player", "Unity.TextMeshPro.Player.csproj", "{F1CA471D-22AC-18A9-132D-9C670FF66678}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinemachine.Player", "Cinemachine.Player.csproj", "{55754795-C83B-9DB5-1474-A59699BF76DA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.Core.Runtime.Player", "Unity.RenderPipelines.Core.Runtime.Player.csproj", "{0F5A4DB7-7D7E-84A9-A3A7-05274FC17E47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Analytics.DataPrivacy.Player", "Unity.Analytics.DataPrivacy.Player.csproj", "{42411805-2A76-B786-50D5-240EEE2DE49C}"
@@ -20,8 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player", "Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj", "{623A992A-34B9-9AE4-6FC0-CE3A7B028BD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.Core.ShaderLibrary.Player", "Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj", "{A4B6F7D5-5CA2-0A88-F5C2-C9C092E9E2A1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinemachine.Player", "Cinemachine.Player.csproj", "{55754795-C83B-9DB5-1474-A59699BF76DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +49,10 @@ Global
 		{F1CA471D-22AC-18A9-132D-9C670FF66678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1CA471D-22AC-18A9-132D-9C670FF66678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1CA471D-22AC-18A9-132D-9C670FF66678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55754795-C83B-9DB5-1474-A59699BF76DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55754795-C83B-9DB5-1474-A59699BF76DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55754795-C83B-9DB5-1474-A59699BF76DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55754795-C83B-9DB5-1474-A59699BF76DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F5A4DB7-7D7E-84A9-A3A7-05274FC17E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F5A4DB7-7D7E-84A9-A3A7-05274FC17E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F5A4DB7-7D7E-84A9-A3A7-05274FC17E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,10 +73,6 @@ Global
 		{A4B6F7D5-5CA2-0A88-F5C2-C9C092E9E2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4B6F7D5-5CA2-0A88-F5C2-C9C092E9E2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4B6F7D5-5CA2-0A88-F5C2-C9C092E9E2A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55754795-C83B-9DB5-1474-A59699BF76DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55754795-C83B-9DB5-1474-A59699BF76DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55754795-C83B-9DB5-1474-A59699BF76DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55754795-C83B-9DB5-1474-A59699BF76DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
