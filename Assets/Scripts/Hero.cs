@@ -7,9 +7,9 @@ public abstract class Hero : Player
     [SerializeField]
     protected string lore;
     [SerializeField]
-    private bool canMoveAsAllie = false;
+    protected bool canMoveAsAllie = false;
     [SerializeField]
-    private bool imLeader = false;
+    protected bool imLeader = false;
 
     Transform partyLeader;
     
@@ -39,7 +39,7 @@ public abstract class Hero : Player
             {
                 transform.LookAt(partyLeader);
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                anim.SetFloat("move", Mathf.Abs(ControllerSystem.Axis.magnitude));
+             
             }
         }
     }
