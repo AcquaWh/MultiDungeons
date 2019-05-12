@@ -64,8 +64,13 @@
   <ItemGroup>
     <Compile Include="Assets\Ejemplo\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Ejemplo\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\ControllerSystem.cs" />
-    <Compile Include="Assets\Scripts\Palayer.cs" />
+    <Compile Include="Assets\Scripts\Core\ControllerSystem.cs" />
+    <Compile Include="Assets\Scripts\Core\PartySystem.cs" />
+    <Compile Include="Assets\Scripts\Gamemanager.cs" />
+    <Compile Include="Assets\Scripts\Hero.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Wizard\Wizard.cs" />
+    <Compile Include="Assets\Scripts\Wizard\WizardAttack.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Usuario/Documents/GitHub/MultiDungeonsV2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
