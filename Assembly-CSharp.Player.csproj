@@ -897,6 +897,7 @@
     <Compile Include="Assets\Scripts\Archer\Archer.cs" />
     <Compile Include="Assets\Scripts\Core\ControllerSystem.cs" />
     <Compile Include="Assets\Scripts\Core\PartySystem.cs" />
+    <Compile Include="Assets\Scripts\Core\TalkSystem.cs" />
     <Compile Include="Assets\Scripts\Gamemanager.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
