@@ -12,6 +12,10 @@ public class Sword : Hero
         {
             anim.SetFloat("move", Mathf.Abs(ControllerSystem.Axis.magnitude));
         }
+        else
+        {
+            anim.SetFloat("move", canMoveAsAllie ? 1 : 0);
+        }
     }
     new void Update()
     {

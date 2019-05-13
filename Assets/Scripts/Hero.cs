@@ -10,6 +10,8 @@ public abstract class Hero : Player
     protected bool canMoveAsAllie = false;
     [SerializeField]
     protected bool imLeader = false;
+    [SerializeField]
+    Transform follow;
 
     Transform partyLeader;
     
@@ -25,21 +27,18 @@ public abstract class Hero : Player
     {
         if (imLeader)
         {
-            transform.Translate(Vector3.forward * ControllerSystem.Axis.magnitude * speed * Time.deltaTime);
-
-            if (ControllerSystem.Axis != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(ControllerSystem.Axis);
-            }
+            ControllerSystem.MoveTopDown3D(transform, speed);
         }
         else
         {
-            canMoveAsAllie = Vector3.Distance(transform.position, partyLeader.position) >= maxDistanceFollow;
-            if (canMoveAsAllie)
+            if (follow)
             {
-                transform.LookAt(partyLeader);
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-             
+                canMoveAsAllie = Vector3.Distance(transform.position, follow.position) >= maxDistanceFollow;
+                if (canMoveAsAllie)
+                {
+                    transform.LookAt(follow);
+                    transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                }
             }
         }
     }
@@ -49,20 +48,19 @@ public abstract class Hero : Player
         base.Recover(health);
     }
 
-
     public bool CanMoveAsAllie
     {
-        get
-        {
-            return canMoveAsAllie;
-        }
+        get => canMoveAsAllie;
     }
 
     public bool ImLeader
     {
-        get
-        {
-            return imLeader;
-        }
+        get => imLeader;
+    }
+
+    public Transform Follow
+    {
+        get => follow;
+        set => follow = value;
     }
 }

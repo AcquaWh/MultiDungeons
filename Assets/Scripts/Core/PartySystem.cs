@@ -15,29 +15,35 @@ namespace Core.PartySystem
 
         public List<Hero> Party
         {
-            get
-            {
-                return party;
-            }
+            get => party;
         }
 
         public Hero Leader
         {
-            get
-            {
-                return leader;
-            }
+            get => leader;
         }
 
         public void StartParty()
         {
             Hero[] heroes = GameObject.FindObjectsOfType<Hero>();
+
             foreach (Hero hero in heroes)
             {
-                party.Add(hero);
+                if (hero.ImLeader) party.Add(hero);
             }
 
-            leader = heroes[0];
+            foreach (Hero hero in heroes)
+            {
+                if(!hero.ImLeader) party.Add(hero);
+            }
+
+            leader = party[0];
+
+            for(int i = 0; i < party.Count; i++)
+            {
+                Hero hero = party[i];
+                if (!hero.ImLeader) hero.Follow = party[i - 1].transform;
+            }
         }
     }
 }
