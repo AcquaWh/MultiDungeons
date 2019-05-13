@@ -34,5 +34,10 @@ namespace Core.ControllerSystem
         {
             get => Input.GetButtonDown("Fire1");
         }
+
+        public static bool Swap
+        {
+            get => Input.GetButtonDown("swap");
+        }
     }
 }

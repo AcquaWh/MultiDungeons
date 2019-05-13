@@ -16,10 +16,7 @@ public class Player : MonoBehaviour
 
     public float Speed
     {
-        get
-        {
-            return speed;
-        }
+        get => speed;
     }
 
     void Awake()
@@ -33,7 +30,7 @@ public class Player : MonoBehaviour
 
     protected virtual void Move()
     {
-        ControllerSystem.MoveTopDown3D(transform, speed);
+        //ControllerSystem.MoveTopDown3D(transform, speed);
     }
     protected virtual void Recover(int health)
     {

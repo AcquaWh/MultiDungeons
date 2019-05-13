@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Core.PartySystem;
+using Core.ControllerSystem;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class Gamemanager : MonoBehaviour
         }
 
         partySystem.StartParty();
+    }
+
+    private void Update()
+    {
+        if (ControllerSystem.Swap) partySystem.SwapLeader();
     }
 
     public PartySystem PartySystem

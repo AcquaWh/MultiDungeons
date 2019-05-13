@@ -56,6 +56,7 @@ public abstract class Hero : Player
     public bool ImLeader
     {
         get => imLeader;
+        set => imLeader = value;
     }
 
     public Transform Follow
