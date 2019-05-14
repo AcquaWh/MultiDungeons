@@ -2,43 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Core.ControllerSystem;
 
 public class TalkSystem : MonoBehaviour
 {
+    [SerializeField]
+    List<Dialog> dialogs;
+
     IEnumerator<WaitForSeconds> checkConv;
-    [SerializeField]
-    GameObject talkSystemUI;
-    [SerializeField]
-    Text textMessage;
-    [SerializeField]
-    string message = "";
 
-    public IEnumerator<WaitForSeconds> CheckConv { get => checkConv; set => checkConv = value; }
-
-    private void Start()
-    {
-        checkConv = CheckConversation();
-        StartCoroutine(checkConv);
-        InitConversation();
-    }
-
-
-    public void InitConversation()
-    {
-        StartCoroutine(checkConv);
-    }
+    public List<Dialog> Dialogs { set => dialogs = value; }
 
     public IEnumerator<WaitForSeconds> CheckConversation()
     {
-        talkSystemUI.SetActive(true);
-        textMessage.text = message;
-        while (true)
+        int counter = 0;
+        SpeechUI speechUI = Gamemanager.instance.TalkPanel.GetComponent<SpeechUI>();
+        speechUI.message = dialogs[0].Lines;
+
+        while (counter < dialogs.Count - 1)
         {
-            yield return new WaitForSeconds(3f);
-            if (!talkSystemUI.activeSelf)
+            yield return new WaitForSeconds(0f);
+            if (ControllerSystem.Interact)
             {
-                talkSystemUI.SetActive(true);
+                counter++;
+                speechUI.message = dialogs[counter].Lines;
             }
         }
+        Gamemanager.instance.TalkPanel.SetActive(false);
     }
 }

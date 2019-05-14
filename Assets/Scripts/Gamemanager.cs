@@ -8,7 +8,7 @@ public class Gamemanager : MonoBehaviour
     [SerializeField]
     PartySystem partySystem;
     [SerializeField]
-    TalkSystem talkSystem;
+    GameObject talkPanel;
 
     void Awake()
     {
@@ -23,36 +23,21 @@ public class Gamemanager : MonoBehaviour
         }
 
         partySystem.StartParty();
-        talkSystem = GetComponent<TalkSystem>();
     }
-    private void Start()
-    {
-        talkSystem.InitConversation();
-        StartCoroutine(talkSystem.CheckConversation());
-        talkSystem.CheckConv = talkSystem.CheckConversation();
-        StartCoroutine(talkSystem.CheckConv);
 
-    }
-    public void InitConversation()
-    {
-        talkSystem.InitConversation();
-    }
+
     private void Update()
     {
         if (ControllerSystem.Swap) partySystem.SwapLeader();
-        if (Input.GetButtonDown("Submit"))
-        {
-            StopAllCoroutines();
-            talkSystem.InitConversation();
-
-        }
     }
 
     public PartySystem PartySystem
     {
-        get
-        {
-            return partySystem;
-        }
+        get => partySystem;
+    }
+
+    public GameObject TalkPanel
+    {
+        get => talkPanel;
     }
 }

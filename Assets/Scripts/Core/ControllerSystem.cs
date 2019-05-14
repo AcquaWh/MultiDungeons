@@ -39,5 +39,10 @@ namespace Core.ControllerSystem
         {
             get => Input.GetButtonDown("swap");
         }
+
+        public static bool Interact
+        {
+            get => Input.GetButtonDown("Submit");
+        }
     }
 }
