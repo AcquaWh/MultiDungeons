@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Core.ControllerSystem;
 
@@ -20,11 +19,6 @@ public class NPC : MonoBehaviour
         talkSystem = new TalkSystem();
     }
 
-    private void Start()
-    {
-        checkConv = talkSystem.CheckConversation();
-    }
-
     //Talking
     private void OnTriggerStay(Collider other)
     {
@@ -35,9 +29,14 @@ public class NPC : MonoBehaviour
             {
                 if (!Gamemanager.instance.TalkPanel.activeSelf)
                 {
+                    checkConv = talkSystem.CheckConversation();
                     Gamemanager.instance.TalkPanel.SetActive(true);
                     talkSystem.Dialogs = lines;
                     StartCoroutine(checkConv);
+                }
+                else
+                {
+                    if(!talkSystem.Speaking) StopCoroutine(checkConv);
                 }
             }
         }
