@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: UnityEditor:UnityEditor.Experimental.TerrainAPI:PaintTextureTool
-  m_ShowMaterialEditor: 1
-  m_SelectedTerrainLayer: {fileID: 8574412962073106934, guid: e715ab5cf20e34e46a74c8fc5fd35faa,
+  m_ShowMaterialEditor: 0
+  m_SelectedTerrainLayer: {fileID: 8574412962073106934, guid: 8bbf1b47851dc1f40981165bb05f3edd,
     type: 2}
   m_ShowLayerEditor: 0

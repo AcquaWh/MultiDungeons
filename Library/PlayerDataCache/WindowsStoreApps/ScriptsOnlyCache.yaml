@@ -1,26 +1,21 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
-    - Readme
-    - UnityTemplateProjects.SimpleCameraController
+    - Archer
+    - Dialog
+    - Gamemanager
+    - NPC
+    - SpeechUI
+    - Sword
+    - WizardAttack
+    Cinemachine.dll:
+    - Cinemachine.CinemachineBrain
+    - Cinemachine.CinemachineComposer
+    - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineTransposer
+    - Cinemachine.CinemachineVirtualCamera
     Unity.Postprocessing.Runtime.dll:
-    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
-    - UnityEngine.Rendering.PostProcessing.AutoExposure
-    - UnityEngine.Rendering.PostProcessing.Bloom
-    - UnityEngine.Rendering.PostProcessing.ChromaticAberration
-    - UnityEngine.Rendering.PostProcessing.ColorGrading
-    - UnityEngine.Rendering.PostProcessing.DepthOfField
-    - UnityEngine.Rendering.PostProcessing.Grain
-    - UnityEngine.Rendering.PostProcessing.LensDistortion
-    - UnityEngine.Rendering.PostProcessing.MotionBlur
-    - UnityEngine.Rendering.PostProcessing.PostProcessLayer
-    - UnityEngine.Rendering.PostProcessing.PostProcessProfile
     - UnityEngine.Rendering.PostProcessing.PostProcessResources
-    - UnityEngine.Rendering.PostProcessing.PostProcessVolume
-    - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
-    - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.RenderPipelines.Lightweight.Runtime.dll:
     - UnityEngine.Rendering.LWRP.ForwardRendererData
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
@@ -31,8 +26,15 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Gameplay.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -51,45 +53,95 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 72
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9314}
+      Script: {instanceID: 9712}
     - Class: 114
-      Script: {instanceID: 9362}
+      Script: {instanceID: 9718}
     - Class: 114
-      Script: {instanceID: 9462}
+      Script: {instanceID: 9724}
     - Class: 114
-      Script: {instanceID: 9710}
+      Script: {instanceID: 9732}
     - Class: 114
-      Script: {instanceID: 9936}
+      Script: {instanceID: 9768}
     - Class: 114
-      Script: {instanceID: 9980}
+      Script: {instanceID: 9770}
     - Class: 114
-      Script: {instanceID: 10752}
+      Script: {instanceID: 10032}
     - Class: 114
-      Script: {instanceID: 11990}
+      Script: {instanceID: 10340}
+    - Class: 114
+      Script: {instanceID: 10782}
+    - Class: 114
+      Script: {instanceID: 10938}
+    - Class: 114
+      Script: {instanceID: 11018}
+    - Class: 114
+      Script: {instanceID: 11182}
+    - Class: 114
+      Script: {instanceID: 11442}
+    - Class: 114
+      Script: {instanceID: 11448}
+    - Class: 114
+      Script: {instanceID: 12136}
+    - Class: 114
+      Script: {instanceID: 12142}
+    - Class: 114
+      Script: {instanceID: 12228}
+    - Class: 114
+      Script: {instanceID: 12308}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 154
+      Script: {instanceID: 0}
+    - Class: 156
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
-    - Class: 205
+    - Class: 213
       Script: {instanceID: 0}
-    - Class: 215
+    - Class: 218
       Script: {instanceID: 0}
-    - Class: 220
+    - Class: 222
       Script: {instanceID: 0}
-    - Class: 258
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 1953259897
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -616,6 +668,12 @@ ScriptsOnlyBuild:
     className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
+      Hash: 3fbb1a5ffeb0d2dc3502a3dae62a7533
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.PostProcessing
+    className: PostProcessingBehaviour
+  - hash:
+      serializedVersion: 2
       Hash: b5eb08b578a2f2d80bb106cbe65ab501
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -632,6 +690,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessProfile
+  - hash:
+      serializedVersion: 2
+      Hash: 57b6c4276b866653b7c5143ab6662495
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Dialog
   - hash:
       serializedVersion: 2
       Hash: 7ef4b463dee3fe5326b5dff22ffda98e
@@ -664,10 +728,10 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: a9b4797432576dbbe8847c98d8430027
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Palayer
+    className: Player
   - hash:
       serializedVersion: 2
       Hash: 7e3eed5fae9dfd3acbdf04e4070b4d31
@@ -686,6 +750,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Lightweight.Runtime.dll
     namespaceName: UnityEngine.Rendering.LWRP
     className: LWRPAdditionalCameraData
+  - hash:
+      serializedVersion: 2
+      Hash: e4aed6759c919dec040272823264015f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WizardAttack
   - hash:
       serializedVersion: 2
       Hash: 8963690ef6f6b05ce03bfd8b5c26e20c
@@ -796,6 +866,12 @@ ScriptsOnlyBuild:
     className: AnalyticsEventTrackerEditor
   - hash:
       serializedVersion: 2
+      Hash: 0568889868f6fb744b2ecba530349fde
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExampleWheelController
+  - hash:
+      serializedVersion: 2
       Hash: 15882a52798c275361cd0a3ada984ec5
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -836,6 +912,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachinePath
+  - hash:
+      serializedVersion: 2
+      Hash: e4aed6759c919dec040272823264015f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sword
   - hash:
       serializedVersion: 2
       Hash: 50c443b12ccc0b475183318b5088bcc5
@@ -994,6 +1076,12 @@ ScriptsOnlyBuild:
     className: VolumeComponent
   - hash:
       serializedVersion: 2
+      Hash: 7a8fb06fa25f0a7409bbd697ae907190
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gamemanager
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1048,6 +1136,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: bd89c02c54734bc10c39b2afb3d65590
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnityEngine.PostProcessing
+    className: PostProcessingProfile
+  - hash:
+      serializedVersion: 2
       Hash: 6ff1c52123c50b3d73f35cd0e2e65dfd
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1072,6 +1166,18 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 5cd88259bb5ebf5ac3b24914c0621f1c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NPC
+  - hash:
+      serializedVersion: 2
+      Hash: d3be7e208b0e83d6fa311eac10247e78
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpeechUI
+  - hash:
+      serializedVersion: 2
       Hash: d5630f96bd5a6a6eed7e1754c3fb8703
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -1088,6 +1194,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: e4aed6759c919dec040272823264015f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Archer
   - hash:
       serializedVersion: 2
       Hash: 3165968ba45c74472d279ba04455fccb
@@ -1144,5 +1256,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 21
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Usuario/Desktop/chuypancho/multidungeon1_0_1
+  - Assets/Scenes/Gameplay.unity
+  playerPath: C:/Users/Usuario/Desktop/chuypancho/multidungeon1_0_2
