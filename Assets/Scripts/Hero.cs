@@ -10,36 +10,40 @@ public abstract class Hero : Player
     protected bool canMoveAsAllie = false;
     [SerializeField]
     protected bool imLeader = false;
+    [SerializeField]
+    Transform follow;
 
     Transform partyLeader;
     
     [SerializeField, Range(0f, 10f)]
     float maxDistanceFollow = 2f;
 
+    [SerializeField, Range(1, 5)]
+    float baseDamage;
+
     private void Start()
     {
+        if (inCombat) return;
         partyLeader = Gamemanager.instance.PartySystem.Leader.transform;
         imLeader = this == partyLeader.GetComponent<Hero>();
     }
     protected override void Move()
     {
+        if (inCombat) return;
         if (imLeader)
         {
-            transform.Translate(Vector3.forward * ControllerSystem.Axis.magnitude * speed * Time.deltaTime);
-
-            if (ControllerSystem.Axis != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(ControllerSystem.Axis);
-            }
+            ControllerSystem.MoveTopDown3D(transform, speed);
         }
         else
         {
-            canMoveAsAllie = Vector3.Distance(transform.position, partyLeader.position) >= maxDistanceFollow;
-            if (canMoveAsAllie)
+            if (follow)
             {
-                transform.LookAt(partyLeader);
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
-             
+                canMoveAsAllie = Vector3.Distance(transform.position, follow.position) >= maxDistanceFollow;
+                if (canMoveAsAllie)
+                {
+                    transform.LookAt(follow);
+                    transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                }
             }
         }
     }
@@ -49,20 +53,22 @@ public abstract class Hero : Player
         base.Recover(health);
     }
 
-
     public bool CanMoveAsAllie
     {
-        get
-        {
-            return canMoveAsAllie;
-        }
+        get => canMoveAsAllie;
     }
 
     public bool ImLeader
     {
-        get
-        {
-            return imLeader;
-        }
+        get => imLeader;
+        set => imLeader = value;
     }
+
+    public Transform Follow
+    {
+        get => follow;
+        set => follow = value;
+    }
+
+    public float BaseDamage { get => baseDamage; set => baseDamage = value; }
 }

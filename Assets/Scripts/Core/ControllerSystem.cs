@@ -18,7 +18,7 @@ namespace Core.ControllerSystem
 
         public static void MoveTopDown3D(Transform t, float speed)
         {
-            t.Translate(t.forward * AxisDelta.magnitude * speed);
+            t.Translate(Vector3.forward * AxisDelta.magnitude * speed);
             if(isMoving)
             {
                 t.rotation = Quaternion.LookRotation(Axis);
@@ -32,12 +32,17 @@ namespace Core.ControllerSystem
 
         public static bool Attack1
         {
-            get
-            {
-                return Input.GetButtonDown("Fire1");
-            }
+            get => Input.GetButtonDown("Attack1");
         }
 
+        public static bool Swap
+        {
+            get => Input.GetButtonDown("swap");
+        }
 
+        public static bool Interact
+        {
+            get => Input.GetButtonDown("Submit");
+        }
     }
 }
