@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
 
     protected Animator anim;
 
+    [SerializeField]
+    protected bool inCombat = false;
+
     public float Speed
     {
         get => speed;

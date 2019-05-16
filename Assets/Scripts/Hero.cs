@@ -18,13 +18,18 @@ public abstract class Hero : Player
     [SerializeField, Range(0f, 10f)]
     float maxDistanceFollow = 2f;
 
+    [SerializeField, Range(1, 5)]
+    float baseDamage;
+
     private void Start()
     {
+        if (inCombat) return;
         partyLeader = Gamemanager.instance.PartySystem.Leader.transform;
         imLeader = this == partyLeader.GetComponent<Hero>();
     }
     protected override void Move()
     {
+        if (inCombat) return;
         if (imLeader)
         {
             ControllerSystem.MoveTopDown3D(transform, speed);
@@ -64,4 +69,6 @@ public abstract class Hero : Player
         get => follow;
         set => follow = value;
     }
+
+    public float BaseDamage { get => baseDamage; set => baseDamage = value; }
 }

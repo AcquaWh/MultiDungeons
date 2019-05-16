@@ -7,6 +7,7 @@ public class Sword : Hero
 {
     protected override void Move()
     {
+        if (inCombat) return;
         base.Move();
         if (ImLeader)
         {
@@ -19,6 +20,7 @@ public class Sword : Hero
     }
     new void Update()
     {
+        if (inCombat) return;
         base.Update();
 
         if (ControllerSystem.Attack1)

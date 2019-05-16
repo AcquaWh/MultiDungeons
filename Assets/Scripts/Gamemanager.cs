@@ -10,6 +10,9 @@ public class Gamemanager : MonoBehaviour
     [SerializeField]
     GameObject talkPanel;
 
+    [SerializeField]
+    GameObject enemie4Combat;
+
     void Awake()
     {
         if (!instance)
@@ -40,4 +43,5 @@ public class Gamemanager : MonoBehaviour
     {
         get => talkPanel;
     }
+    public GameObject Enemie4Combat { get => enemie4Combat; set => enemie4Combat = value; }
 }
