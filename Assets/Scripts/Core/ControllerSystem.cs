@@ -32,7 +32,7 @@ namespace Core.ControllerSystem
 
         public static bool Attack1
         {
-            get => Input.GetButtonDown("Fire1");
+            get => Input.GetButtonDown("Attack1");
         }
 
         public static bool Swap
