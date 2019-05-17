@@ -20,6 +20,8 @@ public abstract class Hero : Player
 
     [SerializeField, Range(1, 5)]
     float baseDamage;
+    [SerializeField]
+    string baseName;
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public abstract class Hero : Player
         if (imLeader)
         {
             ControllerSystem.MoveTopDown3D(transform, speed);
+           
         }
         else
         {
@@ -71,4 +74,5 @@ public abstract class Hero : Player
     }
 
     public float BaseDamage { get => baseDamage; set => baseDamage = value; }
+    public string BaseName { get => baseName; set => baseName = value; }
 }

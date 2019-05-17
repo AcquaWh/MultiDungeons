@@ -5,7 +5,8 @@ public class Dialog : ScriptableObject
 {
     [SerializeField, TextArea(3, 6)]
     string lines;
-
+    [SerializeField]
+    Sprite ImagenAldeano;
     public string Lines { get => lines; }
 }
 

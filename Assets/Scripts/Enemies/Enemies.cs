@@ -10,14 +10,18 @@ public class Enemies : MonoBehaviour
 
     [SerializeField, Range(0f, 5f)]
     float baseDamage;
+    [SerializeField]
+    string baseName;
 
     public float CurrentHealth { get => currentHealth;}
     public float BaseDamage { get => baseDamage; set => baseDamage = value; }
+    public string BaseName { get => baseName; set => baseName = value; }
 
     private void OnTriggerEnter(Collider other)
     {
         Gamemanager.instance.Enemie4Combat = gameObject;
         gameObject.transform.parent = Gamemanager.instance.transform;
+        
         SceneManager.LoadScene("BattleScene");
     }
 
