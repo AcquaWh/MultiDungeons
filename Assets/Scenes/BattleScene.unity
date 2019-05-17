@@ -381,8 +381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59844297b388cc49bfd17146c2cc7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  baseDamage: 0
+  currentHealth: 4
+  baseDamage: 2.25
+  baseName: Enemigo
 --- !u!1 &617746367
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +536,16 @@ PrefabInstance:
       propertyPath: inCombat
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 391704124164578737, guid: 6acd259f78c08de47996d877ffe613ba,
+        type: 3}
+      propertyPath: baseName
+      value: Arquera
+      objectReference: {fileID: 0}
+    - target: {fileID: 391704124164578737, guid: 6acd259f78c08de47996d877ffe613ba,
+        type: 3}
+      propertyPath: baseDamage
+      value: 2.65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6acd259f78c08de47996d877ffe613ba, type: 3}
 --- !u!1 &805948835
@@ -638,6 +649,16 @@ PrefabInstance:
         type: 3}
       propertyPath: inCombat
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28930399617430289, guid: a80603fe4ac098448b33a19e6eefc988,
+        type: 3}
+      propertyPath: baseName
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 28930399617430289, guid: a80603fe4ac098448b33a19e6eefc988,
+        type: 3}
+      propertyPath: baseDamage
+      value: 2.98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80603fe4ac098448b33a19e6eefc988, type: 3}
@@ -1368,6 +1389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: inCombat
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589100388574878939, guid: 4d45a81a2bfecb64588aa7c9ba88910e,
+        type: 3}
+      propertyPath: baseName
+      value: Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589100388574878939, guid: 4d45a81a2bfecb64588aa7c9ba88910e,
+        type: 3}
+      propertyPath: baseDamage
+      value: 3.34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d45a81a2bfecb64588aa7c9ba88910e, type: 3}

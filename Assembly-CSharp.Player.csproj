@@ -895,6 +895,7 @@
     <Compile Include="Assets\Ejemplo\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Ejemplo\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Archer\Archer.cs" />
+    <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\Core\CombatSystem.cs" />
     <Compile Include="Assets\Scripts\Core\ControllerSystem.cs" />
     <Compile Include="Assets\Scripts\Core\PartySystem.cs" />
@@ -903,6 +904,7 @@
     <Compile Include="Assets\Scripts\Enemies\Enemies.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Gamemanager.cs" />
+    <Compile Include="Assets\Scripts\Gameover.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
