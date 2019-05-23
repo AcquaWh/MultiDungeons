@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\Core\CombatSystem.cs" />
     <Compile Include="Assets\Scripts\Core\ControllerSystem.cs" />
+    <Compile Include="Assets\Scripts\Core\EnemySystem.cs" />
     <Compile Include="Assets\Scripts\Core\PartySystem.cs" />
     <Compile Include="Assets\Scripts\Core\TalkSystem.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />

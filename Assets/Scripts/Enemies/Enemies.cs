@@ -13,15 +13,18 @@ public class Enemies : MonoBehaviour
     [SerializeField]
     string baseName;
 
+    [SerializeField]
+    bool used = false;
+
     public float CurrentHealth { get => currentHealth;}
     public float BaseDamage { get => baseDamage; set => baseDamage = value; }
     public string BaseName { get => baseName; set => baseName = value; }
 
+
     private void OnTriggerEnter(Collider other)
     {
         Gamemanager.instance.Enemie4Combat = gameObject;
-        gameObject.transform.parent = Gamemanager.instance.transform;
-        
+        DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("BattleScene");
     }
 
