@@ -18,6 +18,11 @@ public class StatsPanel : MonoBehaviour
     {
         sld_currenthealth.value -= damage;
     }
+    public void GetName(string name)
+    {
+       txtName.text = name;
+    }
+
 
     public bool imDead { get => sld_currenthealth.value == 0f; }
 }

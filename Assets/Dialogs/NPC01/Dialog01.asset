@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43feb0c2269c5df4c9b70995c732c63c, type: 3}
   m_Name: Dialog01
   m_EditorClassIdentifier: 
-  lines: Soy una capsula.
+  lines: "Como ya no hay mucha gente en este pueblo es mi oportunidad para abrir un
+    buen negocio sin tener competencia!\r\n"

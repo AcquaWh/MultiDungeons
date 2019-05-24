@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -381,8 +381,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59844297b388cc49bfd17146c2cc7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  baseDamage: 0
+  currentHealth: 4
+  baseDamage: 2.25
+  baseName: Enemigo
+  used: 0
 --- !u!1 &617746367
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +537,16 @@ PrefabInstance:
       propertyPath: inCombat
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 391704124164578737, guid: 6acd259f78c08de47996d877ffe613ba,
+        type: 3}
+      propertyPath: baseName
+      value: Arquera
+      objectReference: {fileID: 0}
+    - target: {fileID: 391704124164578737, guid: 6acd259f78c08de47996d877ffe613ba,
+        type: 3}
+      propertyPath: baseDamage
+      value: 2.65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6acd259f78c08de47996d877ffe613ba, type: 3}
 --- !u!1 &805948835
@@ -638,6 +650,16 @@ PrefabInstance:
         type: 3}
       propertyPath: inCombat
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28930399617430289, guid: a80603fe4ac098448b33a19e6eefc988,
+        type: 3}
+      propertyPath: baseName
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 28930399617430289, guid: a80603fe4ac098448b33a19e6eefc988,
+        type: 3}
+      propertyPath: baseDamage
+      value: 2.98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80603fe4ac098448b33a19e6eefc988, type: 3}
@@ -905,6 +927,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1260595963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260595966}
+  - component: {fileID: 1260595965}
+  - component: {fileID: 1260595964}
+  m_Layer: 0
+  m_Name: Terrain (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!154 &1260595964
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260595963}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: f02a2bc1edc98d849b58583eb7ed74ec, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1260595965
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260595963}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_TerrainData: {fileID: 15600000, guid: f02a2bc1edc98d849b58583eb7ed74ec, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialType: 3
+  m_LegacySpecular:
+    serializedVersion: 2
+    rgba: 4286545791
+  m_LegacyShininess: 0.078125
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0256
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_AllowAutoConnect: 1
+--- !u!4 &1260595966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260595963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44.9, y: 0, z: -27.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1264214794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,6 +1470,16 @@ PrefabInstance:
         type: 3}
       propertyPath: inCombat
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589100388574878939, guid: 4d45a81a2bfecb64588aa7c9ba88910e,
+        type: 3}
+      propertyPath: baseName
+      value: Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589100388574878939, guid: 4d45a81a2bfecb64588aa7c9ba88910e,
+        type: 3}
+      propertyPath: baseDamage
+      value: 3.34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d45a81a2bfecb64588aa7c9ba88910e, type: 3}

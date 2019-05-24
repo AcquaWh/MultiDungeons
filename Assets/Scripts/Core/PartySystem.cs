@@ -25,6 +25,8 @@ namespace Core.PartySystem
 
         public void StartParty()
         {
+
+            party.Clear();
             Hero[] heroes = GameObject.FindObjectsOfType<Hero>();
 
             foreach (Hero hero in heroes)

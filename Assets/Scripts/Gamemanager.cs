@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Core.PartySystem;
 using Core.ControllerSystem;
+using Core.EnemySystem;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class Gamemanager : MonoBehaviour
     [SerializeField]
     GameObject enemie4Combat;
 
+    [SerializeField]
+    string enemy4Delete = null;
+
+    [SerializeField]
+    EnemySystem enemySystem;
+
     void Awake()
     {
         if (!instance)
@@ -24,8 +31,29 @@ public class Gamemanager : MonoBehaviour
         {
             Destroy(this);
         }
-
         partySystem.StartParty();
+        enemySystem.InitEnemyList();
+    }
+
+    void ClearDeadenemies()
+    {
+        enemySystem.Check4DeadEnemies();
+        foreach (string s in enemySystem.DeadEnemiesList)
+        {
+            GameObject deadEnemy = GameObject.Find(s);
+            Destroy(deadEnemy);
+        }
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        switch (level)
+        {
+            case 1:
+                partySystem.StartParty();
+                ClearDeadenemies();
+                break;
+        }
     }
 
 
@@ -44,4 +72,6 @@ public class Gamemanager : MonoBehaviour
         get => talkPanel;
     }
     public GameObject Enemie4Combat { get => enemie4Combat; set => enemie4Combat = value; }
+    public string Enemy4Delete { get => enemy4Delete; set => enemy4Delete = value; }
+    public EnemySystem EnemySystem { get => enemySystem; set => enemySystem = value; }
 }
