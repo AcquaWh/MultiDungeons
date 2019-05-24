@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Dialog00
   m_EditorClassIdentifier: 
   lines: Mi familia fue de las primeras en llegar a esta tierra... No debemos irnos
+  ImagenAldeano: {fileID: 21300000, guid: 72e92d8ac39ece046b37dc0f381cc34f, type: 3}
