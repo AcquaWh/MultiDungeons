@@ -44,5 +44,9 @@ namespace Core.ControllerSystem
         {
             get => Input.GetButtonDown("Submit");
         }
+        public static bool Start1
+        {
+            get => Input.GetButtonDown("Start");
+        }
     }
 }
