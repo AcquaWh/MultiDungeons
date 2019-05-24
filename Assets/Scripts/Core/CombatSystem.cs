@@ -62,7 +62,7 @@ public class CombatSystem : MonoBehaviour
                     Hero hero = currentTurn.GetComponent<Hero>();
                     statspanel.GetName(hero.BaseName);
                     enemy.GetDamage(hero.BaseDamage);
-
+                    statspanel.GetDamagevalue(hero.BaseDamage);
 
                 }
                 if (currentTurn.GetComponent<Enemies>())
@@ -71,9 +71,11 @@ public class CombatSystem : MonoBehaviour
                     
                     statspanel.GetName(enemy.BaseName);
                     statspanel.GetDamage(enemy.BaseDamage);
+                    
                     if (statspanel.imDead)
                     {
                         Debug.Log("Muerto");
+                        SceneManager.LoadScene("GameOver");
                     }
                 }
                 if (turnIndex < turns.Count - 1)
