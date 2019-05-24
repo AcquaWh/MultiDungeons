@@ -19,6 +19,7 @@ public class TalkSystem
         int counter = 0;
         SpeechUI speechUI = Gamemanager.instance.TalkPanel.GetComponent<SpeechUI>();
         speechUI.message = dialogs[0].Lines;
+        speechUI.profile = dialogs[0].AldeanoImg;
 
         while (counter <= dialogs.Count - 1)
         {
@@ -28,11 +29,13 @@ public class TalkSystem
                 counter++;
                 if (counter >= dialogs.Count) break;
                 speechUI.message = dialogs[counter].Lines;
+                speechUI.profile = dialogs[counter].AldeanoImg;
             }
         }
         Gamemanager.instance.TalkPanel.SetActive(false);
         counter = 0;
         speechUI.message = "";
+        speechUI.profile = null;
         Speaking = false;
     }
 }
