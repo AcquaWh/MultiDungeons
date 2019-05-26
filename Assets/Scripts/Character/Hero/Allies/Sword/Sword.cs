@@ -23,9 +23,6 @@ public class Sword : Hero
         if (inCombat) return;
         base.Update();
 
-        if (ControllerSystem.Attack1)
-        {
-            anim.SetTrigger("attacksword");
-        }
+
     }
 }

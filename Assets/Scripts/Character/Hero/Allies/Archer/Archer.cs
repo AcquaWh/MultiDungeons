@@ -23,9 +23,5 @@ public class Archer : Hero
         if (inCombat) return;
         base.Update();
 
-        if (ControllerSystem.Attack1)
-        {
-            anim.SetTrigger("arrow");
-        }
     }
 }

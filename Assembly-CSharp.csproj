@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
     <Compile Include="Assets\Scripts\SpeechUI.cs" />
     <Compile Include="Assets\Scripts\StatsPanel.cs" />
+    <Compile Include="Assets\Scripts\Transport.cs" />
     <Compile Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
