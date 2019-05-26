@@ -47,23 +47,26 @@ public class CombatSystem : MonoBehaviour
     {
         int turnIndex = 0;
         Enemies enemy = Gamemanager.instance.Enemie4Combat.GetComponent<Enemies>();
-        while (!statspanel.imDead || enemy.CurrentHealth == 0f)
+        while (!statspanel.imDead || statspanel.EnemieCurrentHealth == 0f)
         {
-            Debug.Log("hello");
+            
             yield return new WaitForSeconds(0f);
             if (ControllerSystem.Attack1)
             {
                 
                 GameObject currentTurn = turns[turnIndex];
-
                 if (currentTurn.GetComponent<Hero>())
                 {
                     Debug.Log("hero attack");
                     Hero hero = currentTurn.GetComponent<Hero>();
                     statspanel.GetName(hero.BaseName);
-                    enemy.GetDamage(hero.BaseDamage);
-                    statspanel.GetDamagevalue(hero.BaseDamage);
+                    statspanel.GetDamageEnemie(hero.BaseDamage);
+                    if (turnIndex < turns.Count - 1)
+                    {
+                        Debug.Log("Hola");
+                        turnIndex++;
 
+                    }
                 }
                 if (currentTurn.GetComponent<Enemies>())
                 {
@@ -71,32 +74,30 @@ public class CombatSystem : MonoBehaviour
                     
                     statspanel.GetName(enemy.BaseName);
                     statspanel.GetDamage(enemy.BaseDamage);
-                    
+
+                    turnIndex = 0;
+                        
+
                     if (statspanel.imDead)
                     {
                         Debug.Log("Muerto");
                         SceneManager.LoadScene("GameOver");
                     }
                 }
-                if (turnIndex < turns.Count - 1)
-                {
-                    turnIndex++;
-
-                }
-                else if(!statspanel.imDead || enemy.CurrentHealth == 0f)
+ 
+                else if(statspanel.EnemieCurrentHealth == 0f)
                 {
                     turnIndex = 0;
-                    if (enemy.CurrentHealth == 0f)
-                    {
-                        SceneManager.MoveGameObjectToScene(enemy.gameObject, SceneManager.GetActiveScene());
-                        Gamemanager.instance.Enemy4Delete = enemy.gameObject.name;
-                        Gamemanager.instance.EnemySystem.EnemiesInGame.Remove(enemy.gameObject.name);
-                        Destroy(enemy);
-                        Gamemanager.instance.Enemie4Combat = null;
-                        Debug.Log("Enemigo muerto");
-                    }
+
+                    SceneManager.MoveGameObjectToScene(enemy.gameObject, SceneManager.GetActiveScene());
+                    Gamemanager.instance.Enemy4Delete = enemy.gameObject.name;
+                    Gamemanager.instance.EnemySystem.EnemiesInGame.Remove(enemy.gameObject.name);
+                    Destroy(enemy);
+                    Gamemanager.instance.Enemie4Combat = null;
+                    Debug.Log("Enemigo muerto");
                     SceneManager.LoadScene("Gameplay");
-                } 
+                }
+                
             }
         }
 

@@ -22,17 +22,16 @@ public class StatsPanel : MonoBehaviour
     {
         sld_currenthealth.value -= damage;
     }
-    public void GetDamagevalue(float damage)
-    {
-        sld_currenthealthenemie.value -= damage;
-    }
 
     public void GetName(string name)
     {
-       txtName.text = name;
+        txtName.text = name;
     }
 
-
+    public void GetDamageEnemie(float damage)
+    {
+        sld_currenthealthenemie.value -= damage;
+    }
     public bool imDead { get => sld_currenthealth.value == 0f; }
 
 }
