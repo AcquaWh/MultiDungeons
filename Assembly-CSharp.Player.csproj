@@ -895,6 +895,7 @@
     <Compile Include="Assets\Ejemplo\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Ejemplo\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Character\Hero\Allies\Archer\Archer.cs" />
+    <Compile Include="Assets\Scripts\Character\Hero\Allies\Assasin\Assasin.cs" />
     <Compile Include="Assets\Scripts\Character\Hero\Allies\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Character\Hero\Allies\Sword\Sword.cs" />
     <Compile Include="Assets\Scripts\Character\Hero\Allies\Wizard\Wizard.cs" />
