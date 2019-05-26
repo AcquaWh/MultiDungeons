@@ -23,6 +23,7 @@ public abstract class Hero : Player
     [SerializeField]
     string baseName;
 
+
     private void Start()
     {
         if (inCombat) return;

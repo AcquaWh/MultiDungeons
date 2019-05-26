@@ -5,6 +5,10 @@ using Core.ControllerSystem;
 public class NPC : MonoBehaviour
 {
     [SerializeField]
+    Camera cam;
+    [SerializeField]
+    Camera cam1;
+    [SerializeField]
     List<Dialog> lines;
 
     public List<Dialog> Lines { get => lines; }
@@ -13,7 +17,11 @@ public class NPC : MonoBehaviour
 
     IEnumerator<WaitForSeconds> checkConv;
 
-
+    private void Start()
+    {
+        cam.enabled = true;
+        cam1.enabled = false;
+    }
     private void Awake()
     {
         talkSystem = new TalkSystem();
@@ -31,12 +39,17 @@ public class NPC : MonoBehaviour
                 {
                     checkConv = talkSystem.CheckConversation();
                     Gamemanager.instance.TalkPanel.SetActive(true);
+           
                     talkSystem.Dialogs = lines;
                     StartCoroutine(checkConv);
+                    cam.enabled = false;
+                    cam1.enabled = true;
                 }
                 else
                 {
                     if(!talkSystem.Speaking) StopCoroutine(checkConv);
+                    cam.enabled = true;
+                    cam1.enabled = false;
                 }
             }
         }

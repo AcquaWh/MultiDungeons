@@ -80,9 +80,11 @@
     <Compile Include="Assets\Scripts\Core\PartySystem.cs" />
     <Compile Include="Assets\Scripts\Core\TalkSystem.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
+    <Compile Include="Assets\Scripts\FootSteps.cs" />
     <Compile Include="Assets\Scripts\Gamemanager.cs" />
     <Compile Include="Assets\Scripts\Menu\Button.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
+    <Compile Include="Assets\Scripts\Menu\Pause.cs" />
     <Compile Include="Assets\Scripts\SpeechUI.cs" />
     <Compile Include="Assets\Scripts\StatsPanel.cs" />
     <Compile Include="Assets\Scripts\Transport.cs" />
