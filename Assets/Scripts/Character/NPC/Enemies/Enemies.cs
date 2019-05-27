@@ -2,11 +2,10 @@
 using UnityEngine;
 using Core.ControllerSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Enemies : MonoBehaviour
 {
-    [SerializeField]
-    float currentHealth;
 
     [SerializeField, Range(0f, 5f)]
     float baseDamage;
@@ -16,9 +15,11 @@ public class Enemies : MonoBehaviour
     [SerializeField]
     bool used = false;
 
-    public float CurrentHealth { get => currentHealth;}
+
+
     public float BaseDamage { get => baseDamage; set => baseDamage = value; }
     public string BaseName { get => baseName; set => baseName = value; }
+   
 
 
     private void OnTriggerEnter(Collider other)
@@ -28,8 +29,4 @@ public class Enemies : MonoBehaviour
         SceneManager.LoadScene("BattleScene");
     }
 
-    public void GetDamage(float damage)
-    {
-        currentHealth -= currentHealth - damage > 0 ? damage : currentHealth;
-    }
 }

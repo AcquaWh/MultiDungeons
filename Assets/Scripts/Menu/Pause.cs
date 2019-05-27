@@ -62,6 +62,6 @@ public class Pause : MonoBehaviour
 
     public void QuitGame()
     {
-        SceneManager.LoadScene("GameOver");
+        Application.Quit();
     }
 }

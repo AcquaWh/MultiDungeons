@@ -7,6 +7,7 @@ public class Dialog : ScriptableObject
     string lines;
     [SerializeField]
     Sprite ImagenAldeano;
+
     public string Lines { get => lines; }
     public Sprite AldeanoImg { get => ImagenAldeano;  }
 }
