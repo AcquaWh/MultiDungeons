@@ -1,9 +1,51 @@
 fileFormatVersion: 2
 guid: 7fafd67cb33d43941b25fbeedeeb2d16
 TextureImporter:
-  fileIDToRecycleName: {}
+  internalIDToNameTable:
+  - first:
+      213: -747587299439849126
+    second: T_SNB_Grass_0
+  - first:
+      213: -8907088199691418940
+    second: T_SNB_Grass_1
+  - first:
+      213: -8763556281310664932
+    second: T_SNB_Grass_2
+  - first:
+      213: -4771343469865569044
+    second: T_SNB_Grass_3
+  - first:
+      213: -5200086769946776716
+    second: T_SNB_Grass_4
+  - first:
+      213: 2854916742842548252
+    second: T_SNB_Grass_5
+  - first:
+      213: 7969008637575796702
+    second: T_SNB_Grass_6
+  - first:
+      213: -3505365789684346802
+    second: T_SNB_Grass_7
+  - first:
+      213: -3815107444596335116
+    second: T_SNB_Grass_8
+  - first:
+      213: -7182420261158429274
+    second: T_SNB_Grass_9
+  - first:
+      213: 4370051003322575144
+    second: T_SNB_Grass_10
+  - first:
+      213: 1852474895672642140
+    second: T_SNB_Grass_11
+  - first:
+      213: 4599860009396630476
+    second: T_SNB_Grass_12
+  - first:
+      213: -933240856704673436
+    second: T_SNB_Grass_13
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -21,6 +63,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -31,14 +75,14 @@ TextureImporter:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: -1
     wrapV: -1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -47,7 +91,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 0
   textureShape: 1
@@ -78,18 +122,327 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: T_SNB_Grass_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 405
+        width: 448
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da0eaacdbb4f984185dff18528bb825
+      internalID: -747587299439849126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 275
+        width: 421
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a32746828d26b9458f43dab238a478c
+      internalID: -8907088199691418940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_2
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 362
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692abaa79706cd64b85ed2331233335a
+      internalID: -8763556281310664932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 141
+        width: 43
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f9e1c9d8c0f4342adc2804f9551496
+      internalID: -4771343469865569044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 141
+        width: 177
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e615f3b91fd91458212b2d823b2924
+      internalID: -5200086769946776716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 141
+        width: 61
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8762756cefd61d147a3157eb7b6cebaa
+      internalID: 2854916742842548252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_6
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 141
+        width: 17
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bade8b9ef54e7184485392d95ca921e2
+      internalID: 7969008637575796702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_7
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 141
+        width: 76
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c0da75a0a5df14abbef6e22d98a21b
+      internalID: -3505365789684346802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_8
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 141
+        width: 17
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0e66d5e1ad3444198f6a09c1815f84
+      internalID: -3815107444596335116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_9
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 141
+        width: 7
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f976dbf6af5c4488fa288989551a1d
+      internalID: -7182420261158429274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_10
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 141
+        width: 30
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fce1537a69736d4fb1623900c52a889
+      internalID: 4370051003322575144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_11
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 141
+        width: 13
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e2054b7f0911642848bd38485a8251
+      internalID: 1852474895672642140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_12
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 141
+        width: 29
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa797a7773eaef4bb09541f2cbb61c3
+      internalID: 4599860009396630476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: T_SNB_Grass_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 14
+        width: 414
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbc9f00cb78d474289995654637a699
+      internalID: -933240856704673436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c74ea8a5bcefe4746911728c816cf912
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -17,9 +17,9 @@ public class WizardAttack : Wizard
             anim.SetFloat("move", canMoveAsAllie ? 1 : 0);
         }
     }
+
     new void Update()
     {
-        if (inCombat) return;
         base.Update();
 
     }

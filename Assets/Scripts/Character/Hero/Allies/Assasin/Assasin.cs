@@ -20,7 +20,6 @@ public class Assasin : Hero
     }
     new void Update()
     {
-        if (inCombat) return;
         base.Update();
 
     }

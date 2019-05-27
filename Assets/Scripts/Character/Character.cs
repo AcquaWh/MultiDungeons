@@ -34,6 +34,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     protected bool inCombat = false;
 
+
     public float Speed
     {
         get => speed;
@@ -54,6 +55,7 @@ public abstract class Character : MonoBehaviour
     protected void Update()
     {
         Move();
+        Attack();
     }
 
     protected virtual void Move()
@@ -62,7 +64,6 @@ public abstract class Character : MonoBehaviour
         if (imLeader)
         {
             ControllerSystem.MoveTopDown3D(transform, speed);
-
         }
         else
         {
@@ -74,6 +75,20 @@ public abstract class Character : MonoBehaviour
                     transform.LookAt(follow);
                     transform.Translate(Vector3.forward * speed * Time.deltaTime);
                 }
+            }
+        }
+    }
+    protected virtual void Attack()
+    {
+        if (inCombat)
+        {
+            if (ControllerSystem.Attack1)
+            {
+                anim.SetBool("attack", true);
+            }
+            else
+            {
+                anim.SetBool("attack", false);
             }
         }
     }

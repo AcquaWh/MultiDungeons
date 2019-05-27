@@ -15,9 +15,17 @@ public class CombatSystem : MonoBehaviour
 
     [SerializeField]
     Transform spawnPoint;
+    [SerializeField]
+    AudioClip voiceClips;
+    [SerializeField]
+    AudioClip enemieClips;
 
+    private AudioSource audioSource;
     IEnumerator<WaitForSeconds> checkCombat;
-
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Start()
     {
         Gamemanager.instance.Enemie4Combat.transform.parent = null;
@@ -59,13 +67,14 @@ public class CombatSystem : MonoBehaviour
                 {
                     Debug.Log("hero attack");
                     Hero hero = currentTurn.GetComponent<Hero>();
+                    
                     statspanel.GetName(hero.BaseName);
                     statspanel.GetDamageEnemie(hero.BaseDamage);
+
+                    audioSource.PlayOneShot(voiceClips, 2f);
                     if (turnIndex < turns.Count - 1)
                     {
-                        Debug.Log("Hola");
                         turnIndex++;
-
                     }
                 }
                 if (currentTurn.GetComponent<Enemies>())
@@ -74,9 +83,8 @@ public class CombatSystem : MonoBehaviour
                     
                     statspanel.GetName(enemy.BaseName);
                     statspanel.GetDamage(enemy.BaseDamage);
-
+                    audioSource.PlayOneShot(enemieClips, 2f);
                     turnIndex = 0;
-                        
 
                     if (statspanel.imDead)
                     {
