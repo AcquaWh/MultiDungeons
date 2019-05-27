@@ -141,6 +141,7 @@
     <None Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Resources\Shaders\LutGen.shader" />
     <None Include="Assets\Fantasy_Kingdom_Pack_Lite\Demo\Read me01.txt" />
     <None Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\Room\Settings\Note.txt" />
     <None Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
     <None Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
