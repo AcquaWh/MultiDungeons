@@ -35,6 +35,7 @@ public abstract class Character : MonoBehaviour
     protected bool inCombat = false;
 
 
+
     public float Speed
     {
         get => speed;

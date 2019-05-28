@@ -62,8 +62,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DungeonModules\Scripts\DoorAOpen.cs" />
     <Compile Include="Assets\Ejemplo\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Ejemplo\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Character\Hero\Allies\Archer\Archer.cs" />
     <Compile Include="Assets\Scripts\Character\Hero\Allies\Assasin\Assasin.cs" />
@@ -74,6 +76,9 @@
     <Compile Include="Assets\Scripts\Character\NPC\Enemies\Enemies.cs" />
     <Compile Include="Assets\Scripts\Character\NPC\Enemies\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Character\NPC\NPC.cs" />
+    <Compile Include="Assets\Scripts\Colliders\Back.cs" />
+    <Compile Include="Assets\Scripts\Colliders\House.cs" />
+    <Compile Include="Assets\Scripts\Colliders\Shop.cs" />
     <Compile Include="Assets\Scripts\Core\CombatSystem.cs" />
     <Compile Include="Assets\Scripts\Core\ControllerSystem.cs" />
     <Compile Include="Assets\Scripts\Core\EnemySystem.cs" />

@@ -23,6 +23,7 @@ namespace Core.PartySystem
             get => leader;
         }
 
+
         public void StartParty()
         {
 

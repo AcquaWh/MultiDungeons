@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Ejemplo\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\StylizedNatureBundle\Demo\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
