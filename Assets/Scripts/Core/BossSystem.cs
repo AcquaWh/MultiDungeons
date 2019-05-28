@@ -1,0 +1,114 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Core.ControllerSystem;
+using UnityEngine.SceneManagement;
+
+
+public class BossSystem : MonoBehaviour
+{
+    [SerializeField]
+    StatsPanel statspanel;
+
+    [SerializeField]
+    List<GameObject> turns;
+
+    [SerializeField]
+    Transform spawnPoint;
+    [SerializeField]
+    AudioClip voiceClips;
+    [SerializeField]
+    AudioClip enemieClips;
+
+    private AudioSource audioSource;
+    IEnumerator<WaitForSeconds> checkCombat;
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    private void Start()
+    {
+        Gamemanager.instance.Enemie4Combat.transform.parent = null;
+        Gamemanager.instance.Enemie4Combat.transform.position = spawnPoint.position;
+        Hero[] heroes = GameObject.FindObjectsOfType<Hero>();
+
+        foreach (Hero h in heroes)
+        {
+            turns.Add(h.gameObject);
+        }
+
+        BossBad[] enemines = GameObject.FindObjectsOfType<BossBad>();
+
+        foreach (BossBad e in enemines)
+        {
+            turns.Add(e.gameObject);
+        }
+
+        Gamemanager.instance.Enemie4Combat.transform.LookAt(turns[0].transform);
+
+        checkCombat = CheckCombat();
+        StartCoroutine(checkCombat);
+
+    }
+
+    public IEnumerator<WaitForSeconds> CheckCombat()
+    {
+        int turnIndex = 0;
+        BossBad enemy = Gamemanager.instance.Enemie4Combat.GetComponent<BossBad>();
+        while (!statspanel.imDead || statspanel.EnemieCurrentHealth == 0f)
+        {
+
+            yield return new WaitForSeconds(0f);
+            if (ControllerSystem.Attack1)
+            {
+
+                GameObject currentTurn = turns[turnIndex];
+                if (currentTurn.GetComponent<Hero>())
+                {
+                    Debug.Log("hero attack");
+                    Hero hero = currentTurn.GetComponent<Hero>();
+
+                    statspanel.GetName(hero.BaseName);
+                    statspanel.GetDamageEnemie(hero.BaseDamage);
+
+                    audioSource.PlayOneShot(voiceClips, 2f);
+                    if (turnIndex < turns.Count - 1)
+                    {
+                        turnIndex++;
+                    }
+                }
+                if (currentTurn.GetComponent<BossBad>())
+                {
+                    Debug.Log("enemy attack");
+
+                    statspanel.GetName(enemy.BaseName);
+                    statspanel.GetDamage(enemy.BaseDamage);
+                    audioSource.PlayOneShot(enemieClips, 2f);
+                    turnIndex = 0;
+
+                    if (statspanel.imDead)
+                    {
+                        Debug.Log("Muerto");
+                        SceneManager.LoadScene("GameOver");
+                    }
+                }
+
+                else if (statspanel.EnemieCurrentHealth == 0f)
+                {
+                    turnIndex = 0;
+                    SceneManager.MoveGameObjectToScene(enemy.gameObject, SceneManager.GetActiveScene());
+                    Gamemanager.instance.Enemy4Delete = enemy.gameObject.name;
+                    Gamemanager.instance.EnemySystem.EnemiesInGame.Remove(enemy.gameObject.name);
+                    Destroy(enemy);
+                    
+                    Gamemanager.instance.Enemie4Combat = null;
+                    Debug.Log("Enemigo muerto");
+                    
+                    SceneManager.LoadScene("GameOver");
+                }
+
+            }
+        }
+    }
+}
+
