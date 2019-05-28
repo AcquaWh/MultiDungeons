@@ -35,6 +35,7 @@ public abstract class Character : MonoBehaviour
     protected bool inCombat = false;
 
 
+
     public float Speed
     {
         get => speed;
@@ -57,7 +58,21 @@ public abstract class Character : MonoBehaviour
         Move();
         Attack();
     }
+    //Carga de partidas
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
 
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+    }
     protected virtual void Move()
     {
         if (inCombat) return;
